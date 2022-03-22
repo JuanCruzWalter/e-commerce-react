@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ContainerComponents/ItemListContainer';
+import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <ItemCount />
     </div>
   );
 }
