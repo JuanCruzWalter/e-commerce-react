@@ -24,10 +24,10 @@ function ItemCount() {
         <div id="contenedor">
             <button onClick={restar} id="btnResta" disabled={numero == 1 ? true : null}>-</button>
             <h2>{numero}</h2>
-            <button onClick={sumar} id="btnSuma" disabled={numero == 10 ? true : null}>+</button>
+            <button onClick={sumar} id="btnSuma"  disabled={numero == 10 ? true : null}>+</button>
         </div>
         <div>
-            <button onClick={onAdd}>agregar</button>
+            <button onClick={onAdd} id="btnAgregar">agregar</button>
         </div>
     </section>
   )

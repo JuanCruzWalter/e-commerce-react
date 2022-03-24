@@ -4,6 +4,26 @@
     justify-content:center;
     margin-top: 10%;
 }
-button {
-    margin: 0 4%;
+
+
+#btnSuma, #btnResta {
+    background-color: yellow;
+    border-radius: 5px;
+    border: none;
+    width: 5rem;
+    height: 3,5rem;
+    padding: 0.3rem;
+    margin: 1rem 40%;
+    font-size: 1rem;
+}
+#btnAgregar {
+    
+    align-items: baseline;
+    background-color: rgb(34, 34, 34);
+    border-radius: 5px;
+    border: 2px solid yellow;
+    color: yellow;
+    padding:  0rem 2.3rem 0.3rem 2.3rem;
+    font-size: 1rem;
+    
 }

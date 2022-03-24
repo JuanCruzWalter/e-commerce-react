@@ -1,0 +1,19 @@
+.card {
+    display: inline-flex;
+    height: 20rem;
+    width: 15rem;
+    background-color: rgb(245, 245, 245);
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.card__img {
+    height: 10rem;
+    width: 8rem;
+    
+}
+
+h5 {
+    font-size: 2rem;
+    color: black;
+}

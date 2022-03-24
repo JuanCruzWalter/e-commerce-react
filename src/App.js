@@ -4,28 +4,21 @@ import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ContainerComponents/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
+import ItemList from './components/ItemList/ItemList';
+
 
 function App() {
   return (
     <div className="App">
       <NavBar/>
-      <ItemListContainer saludo="Bienvenidos a nuestra tienda virtual"/>
-      <header className="App-header">
+      <main className="App-header">
+          
+          <ItemList />
+          <ItemCount />
+          
         
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <ItemCount />
+      </main>
+      
     </div>
   );
 }
