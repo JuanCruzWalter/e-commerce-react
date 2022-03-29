@@ -2,10 +2,12 @@ import React from 'react'
 import './item.css'
 
 
+
 /* const Items = ({ nombres, caracteristicas, imgs, id }); */
                   
 function Item({nombres,caracteristicas,imgs,precio}) {
   return (
+    
     <div className='card'>
         <div className="card__" >
             <img src={imgs} className="card__img" alt="..."/>

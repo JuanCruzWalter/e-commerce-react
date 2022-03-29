@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/ContainerComponents/ItemListContainer';
+
 import ItemCount from './components/ItemCount/ItemCount';
 import ItemList from './components/ItemList/ItemList';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
@@ -15,6 +15,9 @@ function App() {
           
           <ItemList />
           <ItemCount />
+          <ItemDetailContainer />
+          
+          
           
         
       </main>
