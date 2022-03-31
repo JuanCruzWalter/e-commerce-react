@@ -1,7 +1,7 @@
-[   {"id":"1","marca":"nike","precio":2000,"imagen":"x","caracteristicas":"remera azul"},
-    {"id":"2","marca":"adidas","precio":3400,"imagen":"x","caracteristicas":"remera azul"},
-    {"id":"1","marca":"nike","precio":3100,"imagen":"x","caracteristicas":"remera azul"},
-    {"id":"1","marca":"puma","precio":1200,"imagen":"x","caracteristicas":"remera azul"},
-    {"id":"1","marca":"rebook","precio":3000,"imagen":"x","caracteristicas":"remera azul"}
+[   {"id":"0","marca":"nike","precio":2000,"imagen":"x","caracteristicas":"remera azul"},
+    {"id":"1","marca":"adidas","precio":3400,"imagen":"x","caracteristicas":"camisa lino"},
+    {"id":"2","marca":"nike","precio":3100,"imagen":"x","caracteristicas":"chomba blanca"},
+    {"id":"3","marca":"puma","precio":1200,"imagen":"x","caracteristicas":"remera azul"},
+    {"id":"4","marca":"rebook","precio":3000,"imagen":"x","caracteristicas":"remera azul"}
     
 ]

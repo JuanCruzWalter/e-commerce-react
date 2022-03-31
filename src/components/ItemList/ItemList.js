@@ -42,6 +42,7 @@ function ItemList() {
                       imgs={product.img} 
                       caracteristicas={product.caracteristica}
                       precio = {product.precio}
+                      id = {product.id}
                     />
                   </div>
                 );

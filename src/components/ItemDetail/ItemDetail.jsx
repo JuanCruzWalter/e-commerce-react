@@ -2,6 +2,7 @@
 function ItemDetail({nombre}) {
   return (
     <h1>{nombre}</h1>
+    
   )
 }
 

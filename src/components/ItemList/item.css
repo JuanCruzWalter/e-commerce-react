@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 20rem;
+    height: 25rem;
     width: 15rem;
     background-color: rgb(245, 245, 245);
     margin: 1rem;
@@ -25,4 +25,14 @@
 h5 {
     font-size: 2rem;
     color: black;
+}
+
+.card__btn{
+    background-color: yellow;
+    color: rgb(34, 36, 53);
+    border-radius: 5px;
+    border: none;
+    padding: .3rem 2rem;
+    font-size: large;
+    font-weight: bolder;
 }

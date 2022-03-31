@@ -1,35 +1,45 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react'
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 let objetos
+let activado
 function ItemDetailContainer() {
-  
-    const [products, setProducts] = useState([]);
+  const {detalleid} = useParams()
+    let [products, setProducts] = useState([]);
+    let [anda,setAnda]=useState();
+    let [detalleNumero,setDetalle]=useState();
     
-    
+    useState(detalleid)
      useEffect(()=>{
-      /* fetch('archivosPrueba.json')
-      .then(datas => datas.json())
-      .then(data => objetos=parseInt(data[0].precio))
-      .then(console.log(objetos)) */
       fetch('objetos.json')
         .then(response => response.json())
-        .then(data => {objetos=data[0].caracteristicas
-        console.log(objetos)
-        setProducts(objetos)})
-        .catch("no anda")
-        
-      
-    },[]) 
+        .then(data => {objetos=data
 
-    
+        /* console.log(objetos) */
+        activado=true
+        setProducts(objetos)
+        
+      setAnda(activado)
+      })
+        .catch("no anda")
+    },[]) 
+    console.log(detalleid)
   return (
     <div>
-        <ItemDetail
-            nombre={products}
-        />
+      
+        {anda ? (
+          <div>
+            <ItemDetail
+                nombre={products[detalleid].caracteristicas}
+            />
+          </div>
+        ):(
+          <div>no anda</div>
+        )}
+
     </div>
   )
 }
