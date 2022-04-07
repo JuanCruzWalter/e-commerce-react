@@ -34,6 +34,7 @@ function ItemDetailContainer() {
           <div>
             <ItemDetail
                 nombre={products[detalleid].caracteristicas}
+                id={products[detalleid].id}
             />
           </div>
         ):(

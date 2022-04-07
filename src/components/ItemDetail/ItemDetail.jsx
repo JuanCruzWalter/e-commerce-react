@@ -1,11 +1,13 @@
 import ItemCount from "../ItemCount/ItemCount"
 
 
-function ItemDetail({nombre}) {
+function ItemDetail({nombre, id}) {
   return (
     <><h1>{nombre}</h1><div>
 
-      <ItemCount />
+      <ItemCount nombre={nombre}
+                  id={id}
+      />
 
     </div></>
     
