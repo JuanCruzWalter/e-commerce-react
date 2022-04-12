@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
+
 let objetos
 let activado
 function ItemDetailContainer() {
@@ -26,7 +27,6 @@ function ItemDetailContainer() {
       })
         .catch("no anda")
     },[]) 
-    console.log(detalleid)
   return (
     <div>
       
@@ -35,6 +35,7 @@ function ItemDetailContainer() {
             <ItemDetail
                 nombre={products[detalleid].caracteristicas}
                 id={products[detalleid].id}
+                precio ={products[detalleid].precio}
             />
           </div>
         ):(

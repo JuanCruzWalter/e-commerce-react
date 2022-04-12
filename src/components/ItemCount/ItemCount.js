@@ -1,17 +1,16 @@
 import React, { useContext } from 'react'
 import {useState} from 'react'
 import { Link } from 'react-router-dom'
-import { CartContext } from '../Context/CartContext'
 import "./ItemCount.css"
-
+import { CartContext } from "../Context/CartContext";
 
 
 
 let activado=false
+let igual=false
+function ItemCount({nombre,id,precio}) {
 
-function ItemCount({nombre,id}) {
-
-    const {addToCart,cartList} = useContext(CartContext)
+    const {addToCart,cartList,traerInfo,calcularTotal,total} = useContext(CartContext)
 
 
 
@@ -20,6 +19,7 @@ function ItemCount({nombre,id}) {
 
     const [nombreProducto,setNombre] = useState(nombre)
     const [idProducto,setId] = useState(id)
+    const [precioProducto,setPrecio] = useState(precio)
     
     function sumar (){
         if(numero<=9){
@@ -33,11 +33,37 @@ function ItemCount({nombre,id}) {
         }
     }
     function onAdd(){
-        activado=true
+        traerInfo(parseInt(idProducto))
+        calcularTotal(total+precio*numero)
+        console.log("el total"+total)
+        activado=false
         setActivador(activado)
-        addToCart({nombreProducto, numero,idProducto})
+        if (activado!=true) {
+            for (let i = 0; i < cartList.length; i++) {
+                if (cartList[i].idProducto==idProducto) {
+                    let cantidad=cartList[i].numero;
+                        cantidad=cantidad+numero
+                        cartList[i].numero=cantidad
+                        activado=true
+                        break
+                }
+            }
+        }
+        if(activado!=true){
+            addToCart({nombreProducto, numero,idProducto})
+            console.log(cartList)
+            activado=true
+            setActivador(activado)
+        }
+        if (activado) {
+            setActivador(activado)
+        }
         
-        if (cartList!=null) {
+        
+        
+        
+        
+       /*  if (cartList!=null) {
             for (let i = 0; i < cartList.length; i++) {
                 if (cartList[i].idProducto==idProducto) {
                     let cantidad=cartList[i].numero;
@@ -47,7 +73,7 @@ function ItemCount({nombre,id}) {
                 }
                 
             }
-        }
+        } */
         
     }
     console.log("el id es"+idProducto)
