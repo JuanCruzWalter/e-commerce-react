@@ -2,12 +2,16 @@ import { useState } from "react";
 
 import ItemCount from "../ItemCount/ItemCount"
 
-function ItemDetail({nombre,id,precio}) {
+function ItemDetail({nombre,id,precio,imagen}) {
 
   const [activador,setActivado] = useState()
   
   return (
-    <><h1 style={{"width":"50%","margin":"auto","fontSize":"2em"}}>{nombre}</h1><>
+      <>
+      <img style={{"width":"30%","marginLeft":"0%"}} src={imagen}/>
+  
+      <h1 style={{"width":"30%","margin":"auto","fontSize":"2rem"}}>{nombre}</h1>
+      <>
       
       
       <div>
